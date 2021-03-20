@@ -1,0 +1,29 @@
+.button {
+  outline: none;
+  border: none;
+  display: inline-block;
+  width: auto;
+  padding: 15px 20px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  &__block {
+    width: 100%;
+  }
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.85;
+  transform: scale(0);
+  animation: ripple 1s;
+
+  @keyframes ripple {
+    to {
+      opacity: 0;
+      transform: scale(2);
+    }
+  }
+}
