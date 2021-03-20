@@ -1,0 +1,60 @@
+@use '../sass/mixins';
+
+.header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  height: var(--header-outer-height);
+  top: calc(var(--header-inner-height) - var(--header-outer-height));
+  z-index: 10;
+  background: var(--surface);
+  box-shadow: 0 2px 4px var(--header-shadow);
+
+  &__inner {
+    width: 100%;
+    height: var(--header-inner-height);
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+  }
+
+  .brand {
+    margin: 0;
+    font-family: var(--font-brand);
+    font-size: 2rem;
+    color: var(--primary);
+  }
+
+  .theme_toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 10px;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: var(--background);
+    color: var(--primary);
+    transition: all 0.4s linear;
+
+    &:hover {
+      background: var(--primary);
+      color: var(--on-primary);
+    }
+  }
+
+  @include mixins.media("tablet") {
+    .brand { font-size: 2.4rem; }
+    .theme_toggle { font-size: 1.4rem; }
+  }
+
+  @include mixins.media("laptopM") {
+    .brand { font-size: 2.8rem; }
+    .theme_toggle { font-size: 1.8rem; }
+  }
+}
