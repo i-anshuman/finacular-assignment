@@ -1,0 +1,69 @@
+/**
+ * All global styles here
+ */
+
+@import './sass/normalize';
+@import './sass/variables';
+@import './sass/functions';
+@import './sass/fonts';
+@import './sass/colors';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  transition: color, background-color 0.4s ease;
+}
+
+:root {
+  /* Base font size */
+  font-size: 16px;
+
+  /* Font Families */
+  --font-primary: 'Noto Sans JP', sans-serif;
+  --font-secondary: 'Raleway', sans-serif;
+
+  /* 10 Shades of Grey */
+  --grey-50: #{ map-get($map: $grey, $key: 50) };
+  --grey-100: #{ map-get($map: $grey, $key: 100) };
+  --grey-200: #{ map-get($map: $grey, $key: 200) };
+  --grey-300: #{ map-get($map: $grey, $key: 300) };
+  --grey-400: #{ map-get($map: $grey, $key: 400) };
+  --grey-500: #{ map-get($map: $grey, $key: 500) };
+  --grey-600: #{ map-get($map: $grey, $key: 600) };
+  --grey-700: #{ map-get($map: $grey, $key: 700) };
+  --grey-800: #{ map-get($map: $grey, $key: 800) };
+  --grey-900: #{ map-get($map: $grey, $key: 900) };
+
+  /* Theme Colours */
+
+  --error: #b00020;
+  --surface: #fff;
+  --primary: #6200ee; // 500
+  --secondary: #03dac6; // 200
+  --background: #fff;
+  --primary-variant: #3700b3; // 700
+  --secondary-variant: #018786; // 900
+  --on-error: #fff;
+  --on-surface: #000;
+  --on-primary: #fff;
+  --on-secondary: #000;
+  --on-background: #000;
+}
+
+::selection {
+  color: var(--background);
+  background-color: var(--primary);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--background);
+  min-width: 320px;
+}
