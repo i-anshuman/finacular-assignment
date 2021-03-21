@@ -19,9 +19,9 @@ const Footer = props => {
         <a href={developer.url} target="_blank" rel="noreferrer">
           {developer.name}
         </a>
-        <span className={styles.footer__copyright}>
-          &copy; 2021 {developer.name}
-        </span>
+      </p>
+      <p className={styles.footer__copyright}>
+        &copy; 2021 {developer.name}
       </p>
     </footer>
   );
