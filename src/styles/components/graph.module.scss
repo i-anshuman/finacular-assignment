@@ -1,0 +1,14 @@
+.graph {
+  padding: 30px 40px;
+  & svg {
+    margin: 0 auto;
+    display: block;
+  }
+
+  &__title {
+    text-align: center;
+    font-family: var(--font-secondary);
+    color: var(--primary);
+    margin-bottom: 0;
+  }
+}
