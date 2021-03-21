@@ -52,3 +52,11 @@
   border: 1px solid var(--primary);
   border-radius: 5px;
 }
+
+.msg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translateY(100%);
+  color: var(--error);
+}

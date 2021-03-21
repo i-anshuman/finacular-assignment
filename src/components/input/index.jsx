@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import styles from '../../styles/components/input.module.scss';
 
-const Input = ({label, type, placeholder, ...props}) => {
+const Input = ({label, type, placeholder, error, ...props}) => {
   return (
     <div className={styles.wrapper}>
       <input
@@ -12,6 +12,7 @@ const Input = ({label, type, placeholder, ...props}) => {
       />
       <label className={styles.label}>{label}</label>
       <div className={styles.fieldset}></div>
+      <small className={styles.msg}>{error}</small>
     </div>
   );
 };
