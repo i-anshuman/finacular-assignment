@@ -3,6 +3,9 @@
   & svg {
     margin: 0 auto;
     display: block;
+    & > * {
+      color: var(--on-background);
+    }
   }
 
   &__title {

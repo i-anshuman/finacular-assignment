@@ -29,12 +29,13 @@
 
       thead {
         background: var(--primary-variant);
-        color: var(--on-primary);
+        color: #fff !important;
       }
 
       tbody, thead {
         text-align: center;
         font-family: var(--font-primary);
+        color: var(--on-background)
       }
 
       tbody tr {

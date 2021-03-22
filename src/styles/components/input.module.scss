@@ -11,6 +11,7 @@
   outline: none;
   border: none;
   margin: 16px 14px;
+  background-color: var(--background);
 
   &:hover ~ .fieldset {
     border: 1px solid var(--primary);
@@ -38,7 +39,7 @@
   transform: translate(15px, 17px) scale(1);
   transform-origin: top left;
   transition: all 0.4s var(--tf-1);
-  background-color: #fff;
+  background-color: var(--background);
   padding: 0 2px;
   z-index: 1;
 }
