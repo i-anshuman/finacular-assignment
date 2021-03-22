@@ -35,7 +35,19 @@
   --grey-800: #{ map-get($map: colors.$grey, $key: 800) };
   --grey-900: #{ map-get($map: colors.$grey, $key: 900) };
 
-  /* Theme Colours */
+  /* Variables for Header */
+  --header-outer-height: 120px;
+  --header-inner-height: 70px;
+  --header-shadow: var(--grey-900);
+
+  /* Variables for Section */
+  --section-shadow: var(--grey-600);
+
+  /* Timing Function */
+  --tf-1: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+[data-theme='light'] {
+  /* Light Theme Colours */
   --error: #b00020;
   --surface: #fff;
   --primary: #6200ee; // 500
@@ -48,17 +60,21 @@
   --on-primary: #fff;
   --on-secondary: #000;
   --on-background: #000;
-
-  /* Variables for Header */
-  --header-outer-height: 120px;
-  --header-inner-height: 70px;
-  --header-shadow: var(--grey-900);
-
-  /* Variables for Section */
-  --section-shadow: var(--grey-600);
-
-  /* Timing Function */
-  --tf-1: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+[data-theme='dark'] {
+  /* Dark Theme Colours */
+  --background: #121212;
+  --surface: #121212;
+  --primary: #bb86fc; // 200
+  --primary-variant: #3700b3; // 700
+  --secondary: #03dac6; // 200
+  --secondary-variant: #018786; // 200
+  --error: #cf6679;
+  --on-primary: #000;
+  --on-secondary: #000;
+  --on-background: #fff;
+  --on-surface: #fff;
+  --on-error: #000;
 }
 
 ::selection {
