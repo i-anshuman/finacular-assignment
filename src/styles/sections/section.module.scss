@@ -1,0 +1,77 @@
+/**
+ * Common styles among multiple sections
+ */
+
+@use '../sass/mixins';
+
+.section {
+  position: relative;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px var(--section-shadow);
+
+  &__title {
+    font-family: var(--font-secondary);
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--primary);
+  }
+
+  &__table {
+    border: 1px solid var(--primary);
+    position: relative;
+    overflow-x: auto;
+
+    table {
+      width: 100%;
+      min-width: 500px;
+      border: 0;
+
+      thead {
+        background: var(--primary-variant);
+        color: var(--on-primary);
+      }
+
+      tbody, thead {
+        text-align: center;
+        font-family: var(--font-primary);
+      }
+
+      tbody tr {
+        &:nth-child(even) {
+          background: var(--primary);
+          color: var(--on-primary);
+        }
+      }
+
+      td, th {
+        padding: 10px 15px;
+        margin: 0;
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    & > * {
+      flex-grow: 1;
+    }
+
+    @include mixins.media("tablet") {
+      flex-direction: row;
+      & > * {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__btn {
+    margin: 20px 0 10px 0;
+    background: var(--primary);
+    color: var(--on-primary);
+    border-radius: 5px;
+  }
+}
