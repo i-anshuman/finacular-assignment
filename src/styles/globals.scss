@@ -2,11 +2,10 @@
  * All global styles here
  */
 
-@import './sass/normalize';
-@import './sass/variables';
-@import './sass/functions';
-@import './sass/fonts';
-@import './sass/colors';
+@use './sass/normalize';
+@use './sass/variables';
+@use './sass/fonts';
+@use './sass/colors';
 
 *,
 *::before,
@@ -20,23 +19,23 @@
   font-size: 16px;
 
   /* Font Families */
+  --font-brand: 'Pacifico', cursive;
   --font-primary: 'Noto Sans JP', sans-serif;
   --font-secondary: 'Raleway', sans-serif;
 
   /* 10 Shades of Grey */
-  --grey-50: #{ map-get($map: $grey, $key: 50) };
-  --grey-100: #{ map-get($map: $grey, $key: 100) };
-  --grey-200: #{ map-get($map: $grey, $key: 200) };
-  --grey-300: #{ map-get($map: $grey, $key: 300) };
-  --grey-400: #{ map-get($map: $grey, $key: 400) };
-  --grey-500: #{ map-get($map: $grey, $key: 500) };
-  --grey-600: #{ map-get($map: $grey, $key: 600) };
-  --grey-700: #{ map-get($map: $grey, $key: 700) };
-  --grey-800: #{ map-get($map: $grey, $key: 800) };
-  --grey-900: #{ map-get($map: $grey, $key: 900) };
+  --grey-50: #{ map-get($map: colors.$grey, $key: 50) };
+  --grey-100: #{ map-get($map: colors.$grey, $key: 100) };
+  --grey-200: #{ map-get($map: colors.$grey, $key: 200) };
+  --grey-300: #{ map-get($map: colors.$grey, $key: 300) };
+  --grey-400: #{ map-get($map: colors.$grey, $key: 400) };
+  --grey-500: #{ map-get($map: colors.$grey, $key: 500) };
+  --grey-600: #{ map-get($map: colors.$grey, $key: 600) };
+  --grey-700: #{ map-get($map: colors.$grey, $key: 700) };
+  --grey-800: #{ map-get($map: colors.$grey, $key: 800) };
+  --grey-900: #{ map-get($map: colors.$grey, $key: 900) };
 
   /* Theme Colours */
-
   --error: #b00020;
   --surface: #fff;
   --primary: #6200ee; // 500
@@ -49,6 +48,17 @@
   --on-primary: #fff;
   --on-secondary: #000;
   --on-background: #000;
+
+  /* Variables for Header */
+  --header-outer-height: 120px;
+  --header-inner-height: 70px;
+  --header-shadow: var(--grey-900);
+
+  /* Variables for Section */
+  --section-shadow: var(--grey-600);
+
+  /* Timing Function */
+  --tf-1: cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
 
 ::selection {
@@ -66,4 +76,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: var(--background);
   min-width: 320px;
+}
+
+main {
+  padding: 20px 30px;
+}
+
+a {
+  cursor: pointer;
+  outline: 0;
+  color: inherit;
+  text-decoration: none;
 }

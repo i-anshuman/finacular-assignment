@@ -1,0 +1,7 @@
+@use './variables' as var;
+
+@mixin media ($device) {
+  @media screen and (min-width: map-get($map: var.$breakpoints, $key: $device)) {
+    @content;
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "title": "Finacular",
+  "developer": {
+    "name": "Anshuman",
+    "url": "https://i-anshuman.github.io",
+    "social": [
+      {
+        "title": "LinkedIn",
+        "link": "https://www.linkedin.com/in/iAnshumanGupta/",
+        "icon": "fab fa-linkedin-in"
+      },
+      {
+        "title": "Twitter",
+        "link": "https://twitter.com/_AnshumanGupta",
+        "icon": "fab fa-twitter"
+      },
+      {
+        "title": "Github",
+        "link": "https://github.com/i-anshuman",
+        "icon": "fab fa-github"
+      }
+    ]
+  }
+}
